@@ -10,15 +10,22 @@ public class HRJavaTimeConv {
 
         String hour = time.split(":")[0];
         String min = time.split(":")[1];
-        String sec = time.split(":")[2].substring(0, 1);
+        String sec = time.split(":")[2].substring(0, 2);
 
         String period = time.split(":")[2].substring(2);
 
-        if (period == "AM")
-            System.out.println(hour + min + sec);
-        else {
-            
-            System.out.println(period);
+
+        System.out.println(","+ period+",");
+        if (period.equals("AM")) {
+            if (hour.equals("12"))
+                System.out.println("00:00:00");
+            else
+                System.out.println(hour + ":" + min + ":" + sec);
+        }
+        else if (period.equals("PM")) {
+            hour = String.valueOf((Integer.parseInt(hour) + 12));
+
+            System.out.println(hour + ":" + min + ":" + sec);
         }
 
 
