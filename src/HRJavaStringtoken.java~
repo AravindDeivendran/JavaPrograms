@@ -1,0 +1,27 @@
+/**
+ * Auto Generated Java Class.
+ */
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+public class HRJavaStringtoken {
+  
+  
+  public static void main(String[] args) {
+    
+
+    Scanner sc = new Scanner(System.in);
+
+    String str = sc.nextLine();
+    String[] spl = str.split("[A-Za-z !,?.\_'@]+");
+
+    System.out.println(spl.size());
+    for (int i = 0;i < spl.size(); i++)
+    {
+      System.out.println(spl[i]);
+    }
+  }  
+  
+}

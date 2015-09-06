@@ -32,7 +32,7 @@ public class HRJavaGridSearch {
         if (index[0] == -1)
             return false;
 
-        if(index)
+        return true;
 
     }
     private static int[] findFirstIndex(int[][] mainArray, int value)
